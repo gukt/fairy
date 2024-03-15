@@ -1,0 +1,35 @@
+debug: true
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${app.db.username}
+    password: ${app.db.password}
+#    url: jdbc:mariadb://localhost:3306/fairy?createDatabaseIfNotExist=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://${app.db.host}:${app.db.port}/${app.db.catalog}?createDatabaseIfNotExist=true&useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    hikari:
+      connection-init-sql: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+      minimum-idle: 5
+      maximum-pool-size: 20
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+  jpa:
+    database: mysql
+    properties:
+        hibernate:
+#            dialect: org.hibernate.dialect.MySQL8Dialect
+            format_sql: true
+            show_sql: true
+            hbm2ddl:
+                auto: none
+app:
+  # Database configuration
+  db:
+    host: 123.60.162.9
+    port: 3306
+    username: root
+    password: 1234+asdf
+    catalog: fairy
