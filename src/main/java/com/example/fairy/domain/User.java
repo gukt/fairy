@@ -1,8 +1,7 @@
-package com.example.demo1.domain;
+package com.example.fairy.domain;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * User class

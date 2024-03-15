@@ -1,13 +1,7 @@
-package com.example.demo1.service;
+package com.example.fairy.service;
 
-import com.example.demo1.domain.User;
-import com.example.demo1.domain.UserRepository;
+import com.example.fairy.domain.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
-import java.util.List;
 
 /**
  * UserService class

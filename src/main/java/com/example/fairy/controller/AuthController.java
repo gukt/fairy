@@ -1,7 +1,7 @@
-package com.example.demo1.controller;
+package com.example.fairy.controller;
 
-import com.example.demo1.domain.User;
-import com.example.demo1.domain.UserRepository;
+import com.example.fairy.domain.User;
+import com.example.fairy.domain.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
